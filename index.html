@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050505" />
+    <meta name="description" content="Code Staff — o núcleo de tecnologia do IAPE. Ideias que saem da órbita e pousam na escola." />
+    <title>CODE STAFF — IAPE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="loader" id="loader" aria-label="Carregando a missão" role="status">
+      <canvas id="loaderCanvas" aria-hidden="true"></canvas>
+      <div class="loader-grid" aria-hidden="true"></div>
+      <div class="loader-center">
+        <span class="loader-kicker">IAPE // ORBITAL SYSTEM</span>
+        <strong>CODE STAFF</strong>
+        <span class="loader-status"><i></i> sincronizando curiosidade</span>
+      </div>
+      <div class="loader-progress"><span id="loaderProgress"></span></div>
+      <span class="loader-counter" id="loaderCounter">000%</span>
+    </div>
+
+    <canvas class="starfield" id="starfield" aria-hidden="true"></canvas>
+    <div class="noise" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Code Staff início">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span>CODE<br /><em>STAFF</em></span>
+      </a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="#projeto">O projeto <span>01</span></a>
+        <a href="#projetos">Missões <span>02</span></a>
+        <a href="#devs">Devs <span>03</span></a>
+      </nav>
+      <a class="header-cta" href="#contato"><span>Entrar em órbita</span><b>↗</b></a>
+    </header>
+
+    <main id="top">
+      <section class="hero section-frame" aria-labelledby="hero-title">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="eyebrow-dot"></span>IAPE / NÚCLEO DE TECNOLOGIA</div>
+          <h1 id="hero-title">A escola é o<br /><span>nosso launchpad.</span></h1>
+          <p class="hero-lede">Somos estudantes que transformam perguntas em produtos, protótipos e novas rotas para o futuro.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projeto">Conheça a missão <span>↓</span></a>
+            <a class="text-link" href="#projetos">Ver projetos <span>↗</span></a>
+          </div>
+        </div>
+
+        <div class="hero-orbit reveal delay-1" data-tilt>
+          <div class="orbit-label orbit-label-a"><span>01</span> SIGNAL / ONLINE</div>
+          <div class="orbit-label orbit-label-b"><span>LAT 23°</span> / IAPE</div>
+          <div class="orbit-ring ring-one"></div>
+          <div class="orbit-ring ring-two"></div>
+          <div class="orbit-ring ring-three"></div>
+          <div class="orbit-track"><span></span></div>
+          <div class="planet"><div class="planet-glow"></div><div class="planet-core"></div></div>
+          <div class="orbit-crosshair crosshair-one"></div>
+          <div class="orbit-crosshair crosshair-two"></div>
+          <div class="telemetry-card telemetry-top"><span>VELOCIDADE</span><strong>299.792 <small>km/s</small></strong><i></i></div>
+          <div class="telemetry-card telemetry-bottom"><span>PRÓXIMA JANELA</span><strong>AGORA <b>↗</b></strong><em>MISSION / 001</em></div>
+        </div>
+
+        <div class="hero-foot reveal delay-2">
+          <span>SCROLL TO EXPLORE</span>
+          <div class="scroll-line"><i></i></div>
+          <span>01 — 05</span>
+        </div>
+      </section>
+
+      <section class="intro section-frame reveal" id="projeto" aria-labelledby="intro-title">
+        <div class="section-index">01 <span>/</span> O PROJETO</div>
+        <div class="intro-content">
+          <p class="display-text" id="intro-title">Código é a nossa forma de <em>explorar</em> o que ainda não existe.</p>
+          <div class="intro-aside">
+            <p>O Code Staff é um grupo de coders do Colégio IAPE. Um laboratório vivo onde criatividade, tecnologia e colaboração se encontram para resolver coisas reais da nossa comunidade.</p>
+            <a class="text-link" href="#contato">Conheça nosso manifesto <span>↗</span></a>
+          </div>
+        </div>
+        <div class="stats-row">
+          <div class="stat"><strong>∞</strong><span>CURIOSIDADE<br />SEM LIMITE</span></div>
+          <div class="stat"><strong>01</strong><span>ESCOLA<br />COMO LAB</span></div>
+          <div class="stat"><strong>100%</strong><span>FEITO POR<br />ESTUDANTES</span></div>
+        </div>
+      </section>
+
+      <section class="constellation section-frame" aria-labelledby="constellation-title">
+        <div class="section-heading reveal">
+          <div class="section-index">02 <span>/</span> COMO FUNCIONA</div>
+          <h2 id="constellation-title">Uma constelação<br /><em>de possibilidades.</em></h2>
+        </div>
+        <div class="constellation-layout">
+          <div class="constellation-map reveal delay-1">
+            <svg viewBox="0 0 600 430" role="img" aria-label="Mapa orbital das etapas do Code Staff">
+              <defs>
+                <linearGradient id="lineGlow" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff" stop-opacity=".8"/><stop offset="1" stop-color="#fff" stop-opacity=".05"/></linearGradient>
+                <filter id="softGlow"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+              </defs>
+              <path class="map-line" d="M62 288 C130 82 214 122 294 198 S428 342 537 108" />
+              <path class="map-line faint" d="M62 288 C190 350 274 34 537 108" />
+              <circle class="map-node" cx="62" cy="288" r="7"/><circle class="map-node" cx="206" cy="135" r="7"/><circle class="map-node active" cx="294" cy="198" r="11"/><circle class="map-node" cx="428" cy="300" r="7"/><circle class="map-node" cx="537" cy="108" r="7"/>
+              <circle class="map-pulse" cx="294" cy="198" r="24" filter="url(#softGlow)" />
+              <text x="46" y="326">PERGUNTA</text><text x="180" y="102">PESQUISA</text><text class="active-label" x="272" y="245">IDEIA</text><text x="402" y="338">PROTÓTIPO</text><text x="500" y="80">IMPACTO</text>
+            </svg>
+            <div class="map-coordinates">23° 33' 01" S<br />46° 38' 02" W</div>
+          </div>
+          <div class="steps-list">
+            <article class="step reveal delay-1"><span>01</span><div><h3>Observar</h3><p>Encontrar os sinais, escutar a escola e transformar incômodo em pergunta.</p></div><b>↗</b></article>
+            <article class="step reveal delay-2"><span>02</span><div><h3>Construir</h3><p>Testar rápido, errar barato e colocar ideias em movimento.</p></div><b>↗</b></article>
+            <article class="step reveal delay-3"><span>03</span><div><h3>Compartilhar</h3><p>Documentar o caminho para que a próxima pessoa possa ir ainda mais longe.</p></div><b>↗</b></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects section-frame" id="projetos" aria-labelledby="projects-title">
+        <div class="section-heading split-heading reveal"><div><div class="section-index">03 <span>/</span> MISSÕES</div><h2 id="projects-title">Projetos que<br /><em>saem da órbita.</em></h2></div><p>Não construímos apenas telas. Construímos ferramentas para aprender, colaborar e deixar a escola mais inteligente.</p></div>
+        <div class="project-grid">
+          <article class="project-card project-feature reveal" data-project="01">
+            <div class="project-art art-os"><div class="art-top"><span>CODE STAFF OS</span><span>LIVE / 01</span></div><div class="os-window"><div class="os-sidebar"><i></i><i></i><i></i></div><div class="os-content"><span>Olá, explorador.</span><strong>O que vamos<br />construir hoje?</strong><div class="os-bar"></div></div></div><div class="art-orbit"></div></div>
+            <div class="project-info"><div><span class="project-number">01 / PRODUTO DIGITAL</span><h3>Code Staff OS</h3><p>Um hub para organizar ideias, encontros e os experimentos do núcleo.</p></div><a class="round-arrow" href="#contato" aria-label="Saiba mais sobre o Code Staff OS">↗</a></div>
+          </article>
+          <article class="project-card reveal delay-1" data-project="02">
+            <div class="project-art art-orbitlab"><div class="lab-grid"></div><div class="lab-core"></div><span class="lab-label">ORBIT / LAB_02</span><span class="lab-coord">X: 004.20<br />Y: 099.01</span></div>
+            <div class="project-info"><div><span class="project-number">02 / EXPERIÊNCIA</span><h3>Orbit Lab</h3><p>Experimentos para tornar o aprendizado mais visual, ativo e curioso.</p></div><a class="round-arrow" href="#contato" aria-label="Saiba mais sobre o Orbit Lab">↗</a></div>
+          </article>
+          <article class="project-card reveal delay-2" data-project="03">
+            <div class="project-art art-missao"><div class="mission-signal"></div><span class="mission-big">360°</span><span class="mission-label">ESCOLA EM<br />MOVIMENTO</span></div>
+            <div class="project-info"><div><span class="project-number">03 / IMPACTO</span><h3>Missão 360</h3><p>Mapeando o que a comunidade precisa para criar soluções com propósito.</p></div><a class="round-arrow" href="#contato" aria-label="Saiba mais sobre a Missão 360">↗</a></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="devs section-frame" id="devs" aria-labelledby="devs-title">
+        <div class="section-heading reveal"><div class="section-index">04 <span>/</span> O SQUAD</div><h2 id="devs-title">Pessoas por trás<br /><em>do sinal.</em></h2></div>
+        <div class="devs-intro reveal"><p>Todo grande salto começa com um pequeno grupo disposto a tentar. Esses são os lugares reservados para quem faz o Code Staff acontecer.</p><span>ATUALIZAÇÃO DO SQUAD<br /><strong>EM BREVE / 2026</strong></span></div>
+        <div class="dev-grid">
+          <article class="dev-card reveal"><div class="dev-avatar avatar-one"><span>01</span><i></i></div><div class="dev-meta"><span>DEV 01 / FRONT-END</span><h3>Seu nome<br /><em>aqui.</em></h3><p>interfaces & interação</p></div><b>↗</b></article>
+          <article class="dev-card reveal delay-1"><div class="dev-avatar avatar-two"><span>02</span><i></i></div><div class="dev-meta"><span>DEV 02 / BACK-END</span><h3>Seu nome<br /><em>aqui.</em></h3><p>sistemas & lógica</p></div><b>↗</b></article>
+          <article class="dev-card reveal delay-2"><div class="dev-avatar avatar-three"><span>03</span><i></i></div><div class="dev-meta"><span>DEV 03 / PRODUTO</span><h3>Seu nome<br /><em>aqui.</em></h3><p>pesquisa & estratégia</p></div><b>↗</b></article>
+          <article class="dev-card reveal delay-3"><div class="dev-avatar avatar-four"><span>04</span><i></i></div><div class="dev-meta"><span>DEV 04 / EXPLORAÇÃO</span><h3>Seu nome<br /><em>aqui.</em></h3><p>dados & possibilidades</p></div><b>↗</b></article>
+        </div>
+      </section>
+
+      <section class="contact section-frame" id="contato" aria-labelledby="contact-title">
+        <div class="contact-orbit" aria-hidden="true"><div></div><div></div><div></div></div>
+        <div class="contact-content reveal"><div class="eyebrow"><span class="eyebrow-dot"></span>CANAL ABERTO / SINAL FORTE</div><h2 id="contact-title">Tem uma ideia<br />para lançar?</h2><a class="button button-light" href="mailto:codestaff@iape.edu.br">Falar com o Code Staff <span>↗</span></a></div>
+        <div class="contact-foot"><span>CODE STAFF / IAPE</span><span>EST. 2026</span><span>MADE WITH CURIOSITY</span></div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><span>© 2026 CODE STAFF</span><span>UMA MISSÃO DO COLÉGIO IAPE</span><a href="#top">VOLTAR AO TOPO ↑</a></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
