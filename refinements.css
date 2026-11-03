@@ -1,0 +1,91 @@
+:root {
+  --display: 'Syne', sans-serif;
+  --serif: 'Instrument Serif', Georgia, serif;
+  --body: 'Manrope', sans-serif;
+}
+
+.hero-title {
+  font-weight: 600;
+  letter-spacing: -.105em;
+}
+
+.title-outline {
+  font-family: var(--serif);
+  font-weight: 400;
+  letter-spacing: -.045em;
+}
+
+.editorial-title {
+  font-weight: 600;
+  letter-spacing: -.075em;
+}
+
+.editorial-title em,
+.crew-person h3 em,
+.finale-content h2 em {
+  font-family: var(--serif);
+  font-weight: 400;
+  letter-spacing: -.035em;
+}
+
+.earth-caption {
+  color: rgba(244, 243, 239, .62);
+  text-decoration: none;
+  transition: color .25s ease;
+}
+
+.earth-caption:hover {
+  color: var(--ice);
+}
+
+.mission-card {
+  will-change: transform;
+}
+
+.preloader-copy {
+  animation: loader-breathe 3.15s var(--ease) both;
+}
+
+.hero-title-line:nth-child(1) > span {
+  transition-delay: .02s;
+}
+
+.about-asterisk {
+  font-family: var(--serif);
+  font-size: 1.8rem;
+}
+
+@keyframes loader-breathe {
+  0% { opacity: 0; transform: scale(.84); filter: blur(12px); }
+  20% { opacity: 1; transform: scale(1); filter: blur(0); }
+  72% { opacity: 1; transform: scale(1.015); }
+  100% { opacity: 0; transform: scale(1.16); filter: blur(4px); }
+}
+
+@media (max-width: 700px) {
+  .hero-title {
+    font-size: clamp(5.25rem, 19vw, 8.5rem);
+  }
+
+  .title-outline {
+    margin-left: 7vw;
+  }
+
+  .editorial-title {
+    letter-spacing: -.065em;
+  }
+
+  .earth-caption {
+    font-size: .43rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .preloader-copy {
+    animation: none;
+  }
+
+  .mission-card {
+    will-change: auto;
+  }
+}
