@@ -1,21 +1,25 @@
-# Code Staff
+# Code Staff — ideias em órbita
 
-Landing page do Code Staff, o núcleo de tecnologia do Colégio IAPE.
+Portfólio do grupo de coders do Colégio IAPE. Uma experiência editorial em preto, branco e tons de atmosfera, com abertura cinematográfica, projetos em desenvolvimento e espaço para apresentar a tripulação.
 
 ## Rodar localmente
 
-Como é uma página estática, basta abrir `index.html` ou iniciar um servidor simples:
+Abra `index.html` no navegador ou inicie um servidor estático na pasta:
 
 ```bash
 npx serve .
 ```
 
-## Antes de publicar
+## Personalizar
 
-- Substitua os cards `DEV 01`–`DEV 04` pelos integrantes reais do squad.
-- Troque o e-mail de contato em `index.html` pelo canal oficial do grupo.
-- Ajuste os projetos e a data de fundação conforme a história do Code Staff.
+- Troque os campos `NOME DO/A DEV` pelos nomes e perfis reais da equipe.
+- Atualize as ideias em desenvolvimento quando houver projetos confirmados.
+- Substitua a chamada para o GitHub pelo canal oficial do grupo, se preferir.
 
-## Direção visual
+## Direção visual e movimento
 
-Preto e branco como base, com azul-luz reservado para telemetria, órbitas e estados ativos. A abertura usa um canvas de partículas para simular uma explosão/viagem espacial; o campo estelar, o mapa de constelação e os projetos são desenhados em CSS/SVG para manter a página leve e sem dependência de imagens externas.
+- Tipografia: Syne nos títulos, Instrument Serif nos destaques e Manrope nos textos, com DM Mono para as etiquetas técnicas.
+- Abertura com partículas, feixe de expansão e salto de velocidade.
+- Órbita com parallax, estrelas com profundidade, elementos que entram conforme a rolagem e cartões com inclinação suave.
+- O movimento é reduzido quando o sistema pede `prefers-reduced-motion`.
+- A imagem Blue Marble da Terra é da NASA Goddard Space Flight Center: [NASA Science — Blue Marble](https://science.nasa.gov/resource/blue-marble/).
